@@ -1,6 +1,12 @@
 import { useEffect, useState } from 'react'
-import { ArrowRight, Sparkles } from 'lucide-react'
+import { ArrowRight, Sparkles, Check } from 'lucide-react'
 import { motion } from 'framer-motion'
+
+const benefits = [
+  '24小时免费Demo',
+  '满意后再付款',
+  '无隐藏费用'
+]
 
 export default function Hero() {
   const [mounted, setMounted] = useState(false)
@@ -36,7 +42,7 @@ export default function Hero() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 mb-8">
             <Sparkles className="w-4 h-4 text-accent" />
-            <span className="text-sm text-accent-light tracking-wide">跨境电商网站专家</span>
+            <span className="text-sm text-accent-light tracking-wide">专注跨境电商 3 年+</span>
           </div>
         </motion.div>
 
@@ -44,21 +50,35 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="text-5xl md:text-7xl lg:text-8xl font-semibold tracking-tight mb-6"
+          className="text-4xl md:text-6xl lg:text-7xl font-semibold tracking-tight mb-6 leading-tight"
         >
-          <span className="block text-white">先看到效果</span>
-          <span className="block gradient-text mt-2">再决定是否合作</span>
+          <span className="block text-white">跨境电商独立站</span>
+          <span className="block gradient-text mt-2">设计与开发专家</span>
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto mb-12 leading-relaxed"
+          className="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto mb-8 leading-relaxed"
         >
-          我们专注于跨境电商独立站设计与开发。<br />
-          <span className="text-accent">免费</span>提供首页Demo，<span className="text-accent">1天</span>内交付，满意后再谈价格。
+          从品牌视觉到支付集成，一站式解决出海难题。<br className="hidden md:block" />
+          先看到真实效果，再决定是否合作。
         </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
+          className="flex flex-wrap justify-center gap-4 mb-10"
+        >
+          {benefits.map((benefit) => (
+            <div key={benefit} className="flex items-center gap-2 text-sm text-text-secondary">
+              <Check className="w-4 h-4 text-accent" />
+              <span>{benefit}</span>
+            </div>
+          ))}
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -82,20 +102,6 @@ export default function Hero() {
           >
             查看案例
           </a>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.8 }}
-          className="mt-20 pt-10 border-t border-white/10"
-        >
-          <p className="text-text-muted text-sm mb-6">已服务品牌</p>
-          <div className="flex justify-center items-center gap-12 opacity-40">
-            <span className="text-lg font-medium">EARTHEN</span>
-            <span className="text-lg font-medium">CROSSBORDER</span>
-            <span className="text-lg font-medium">TERRA</span>
-          </div>
         </motion.div>
       </div>
     </section>

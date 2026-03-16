@@ -28,19 +28,19 @@ export default function CTA() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:hello@bridgestudio.com"
+              href="mailto:Ray.globe.2018@gmail.com"
               className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-accent text-bg-primary font-medium rounded-full hover:shadow-lg hover:shadow-accent/25 transition-all duration-300"
             >
               <Mail className="w-5 h-5" />
-              <span>hello@bridgestudio.com</span>
+              <span>{'Ray.globe.2018@gmail.com'}</span>
             </a>
             
             <a
-              href="#"
+              href="weixin://dl/chat?Rayindustryjournal"
               className="inline-flex items-center justify-center gap-3 px-8 py-4 border border-white/20 rounded-full text-white hover:border-accent/50 hover:bg-white/5 transition-all duration-300"
             >
               <MessageCircle className="w-5 h-5" />
-              <span>微信咨询</span>
+              <span>{'微信: Rayindustryjournal'}</span>
             </a>
           </div>
 
